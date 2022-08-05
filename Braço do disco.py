@@ -13,7 +13,7 @@ requisicoes = dados[2:]
 def FCFS():
     movimentacoes = 0
     anterior = inicio
-    for indice, req in enumerate(requisicoes):
+    for req in enumerate(requisicoes):
         if req > qtd_cilindros:
             print('Maior que o número de cilindros!')
         else:
