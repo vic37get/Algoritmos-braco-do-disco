@@ -1,5 +1,5 @@
 # Execução
-`python3 [nomeDoArquivo].py < entrada.txt`
+`python3 main.py < entrada.txt`
 
 ## Funcionamento
 O programa lê da entrada padrão um conjunto de números inteiros onde o primeiro número representa a quantidade de cilindros no disco, o segundo número representa o cilindro sobre o qual a cabeça de leitura do disco está inicialmente posicionada e os demais representam uma sequência de requisições de acesso a serem atendidas, sempre um número por linha. 
