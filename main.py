@@ -22,9 +22,9 @@ def Execução():
     MOVIMENTACOES_SSTF = sst.SSTF(dados)
     MOVIMENTACOES_ELEVADOR = elev.ELEVADOR(dados)
 
-    print('FCFS: {}'.format(MOVIMENTACOES_FCFS))
-    print('SSTF: {}'.format(MOVIMENTACOES_SSTF))
-    print('ELEVADOR: {}'.format(MOVIMENTACOES_ELEVADOR))
+    print('FCFS {}'.format(MOVIMENTACOES_FCFS))
+    print('SSTF {}'.format(MOVIMENTACOES_SSTF))
+    print('ELEVADOR {}'.format(MOVIMENTACOES_ELEVADOR))
 
 # Execução passo a passo
 def ExecuçãoPassoApasso():
@@ -32,9 +32,9 @@ def ExecuçãoPassoApasso():
     MOVIMENTACOES_SSTF = sst.SSTFPassoApasso(dados)
     MOVIMENTACOES_ELEVADOR = elev.ELEVADORPassoApasso(dados)
 
-    print('FCFS: {}'.format(MOVIMENTACOES_FCFS))
-    print('SSTF: {}'.format(MOVIMENTACOES_SSTF))
-    print('ELEVADOR: {}'.format(MOVIMENTACOES_ELEVADOR))
+    print('FCFS {}'.format(MOVIMENTACOES_FCFS))
+    print('SSTF {}'.format(MOVIMENTACOES_SSTF))
+    print('ELEVADOR {}'.format(MOVIMENTACOES_ELEVADOR))
 
 #############################
 #Execução do "main"
