@@ -5,6 +5,41 @@ def TratamentoArquivo(arquivo):
     return arquivo
 
 def ELEVADOR(arquivo):
+    dados = TratamentoArquivo(arquivo)
+    inicio = dados[1]
+    qtd_cilindros = dados[0]
+    requisicoes = dados[2:]
+    movimentacoes = 0
+    anterior = inicio
+    #Requisições na direção oposta a inicial
+    reqOutraDir = []
+    requisicoes = sorted(requisicoes)
+
+    for req in requisicoes:
+        #Se a requisição atual não for maior que a quantidade de cilindros
+        if req < qtd_cilindros:
+            #Se a requisição atual for maior que a requisição inicial
+            if req > inicio:
+                movimentacoes = movimentacoes + (abs(req - anterior))
+                anterior = req
+            #Se a requisição atual for na direção oposta a requisição inicial
+            else:
+                #Adiciona 
+                reqOutraDir.append(req)
+        #Número maior que a quantidade de cilindros.
+        else:
+            continue
+    #Ordenando as requisições da direção oposta ao inicio de forma decrescente        
+    reqOutraDir = sorted(reqOutraDir, reverse=True)
+    #Realizando as requisições na direção oposta a inicial
+    for req in reqOutraDir:
+        movimentacoes = movimentacoes + (abs(req - anterior))
+        anterior = req
+
+    return movimentacoes
+
+#Passo a passo
+def ELEVADORPassoApasso(arquivo):
     print('\n---Algoritmo do Elevador---\n')
     dados = TratamentoArquivo(arquivo)
     inicio = dados[1]
